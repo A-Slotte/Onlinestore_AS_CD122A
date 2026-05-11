@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Onlinestore</title>
+</head>
+<body>
+
+    <h1>Onlinestore</h1>
+
+    <!-- NAVIGATION -->
+    <a href="cart">Gå till kundvagn</a>
+
+    <a href="login_page">Log in</a>
+
+    <!-- SÖK OCH FILTER -->
+    <h2>Produkter</h2>
+    <form action="/products" method="GET">
+        <label for="search">Sök produkt:</label>
+        <input type="text" id="search" name="search"><br><br>
+
+        <label for="supplier">Välj leverantör:</label>
+        <select id="supplier" name="supplier">
+            <option value="">Alla leverantörer</option>
+            <option value="1">LeverantörAB</option>
+            <option value="2">NordSupply</option>
+        </select><br><br>
+
+        <input type="submit" value="Filtrera">
+    </form>
+
+    <hr>
+    <!-- PRODUKTLISTA -->
+    <h2>Produkter</h2>
+    <table border="1">
+        <tr>
+            <th>Namn</th>
+            <th>Pris</th>
+            <th>Rabatt</th>
+            <th>Rabatterat pris</th>
+            <th>Lager</th>
+            <th>Leverantör</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Laptop</td>
+            <td>9999 kr</td>
+            <td>SALE10</td>
+            <td>8999 kr</td>
+            <td>10</td>
+            <td>LeverantörAB</td>
+            <td><a href="/cart/add?prod_id=1">Lägg i kundvagn</a></td>
+        </tr>
+        <tr>
+            <td>Mus</td>
+            <td>299 kr</td>
+            <td>-</td>
+            <td>-</td>
+            <td>50</td>
+            <td>LeverantörAB</td>
+            <td><a href="/cart/add?prod_id=2">Lägg i kundvagn</a></td>
+        </tr>
+        <tr>
+            <td>Tangentbord</td>
+            <td>599 kr</td>
+            <td>VINTER25</td>
+            <td>449 kr</td>
+            <td>30</td>
+            <td>NordSupply</td>
+            <td><a href="/cart/add?prod_id=3">Lägg i kundvagn</a></td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+    <script>
+        loadProducts();
+    </script>
+</body>
+</html>

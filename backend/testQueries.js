@@ -66,6 +66,7 @@ async function setAdmin(){
     console.log(result.rows[0]);
 }
 
+
 async function testQueries() {
     const name = await question('Search PROD ID: ')
     console.log(name)

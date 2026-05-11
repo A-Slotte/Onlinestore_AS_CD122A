@@ -2,4 +2,6 @@ const addUser = 'INSERT INTO users(f_name, l_name, tel, email, address, city, pa
 
 const promoteUser = 'UPDATE users SET is_admin = true WHERE u_id = $1 RETURNING *'
 
-module.exports = {addUser, promoteUser}
+const getUser = 'SELECT * from users WHERE email = $1'
+
+module.exports = {addUser, promoteUser, getUser}
