@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Produktinfo</title>
+</head>
+<body>
+
+    <a id="backLink" href="#">← Tillbaka</a>
+
+    <hr>
+
+    <h1>Laptop</h1>
+
+    <p>Leverantör: LeverantörAB</p>
+    <p>Lager: 10</p>
+
+    <hr>
+
+    <h2>Pris</h2>
+    <p><s>9999 kr</s></p>
+    <p>Rabatterat pris: 8999 kr</p>
+
+    <hr>
+
+    <h2>Rabatt</h2>
+    <p>Namn: SALE10</p>
+    <p>Rabatt: 10%</p>
+    <p>Giltig från: 2024-01-01</p>
+    <p>Giltig till: 2024-01-31</p>
+
+    <hr>
+
+    <h2 id="kundvagn">Lägg i kundvagn</h2>
+    <form>
+        <label for="quantity">Antal:</label>
+        <input type="number" id="quantity" name="quantity" value="1" min="1"><br><br>
+        <input type="button" value="Lägg i kundvagn" onclick="addToCart()">
+    </form>
+
+    <script src="productScript.js"></script>
+
+</body>
+</html>

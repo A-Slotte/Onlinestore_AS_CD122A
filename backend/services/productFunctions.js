@@ -1,5 +1,7 @@
 const prodQuerie = require("../queries/productQueries");
 const supQuerie = require("../queries/supplierQueries");
+require('dotenv').config();
+const pool = require("../config/db")
 const getProductList = async(req, resp, searchParams, error) => {
     try {
         const prodList = await pool.query(prodQuerie.getProducts);
@@ -9,5 +11,7 @@ const getProductList = async(req, resp, searchParams, error) => {
         console.error("Error: ", err);
     }
 }
+
+
 
 module.exports = {getProductList};

@@ -62,9 +62,12 @@ const userLogin = async(req, resp, searchParams, errorReply) => {
             resp.writeHead(200, { "Content-Type": "application/json" });
             resp.end(JSON.stringify({
             success: true,
-            u_id: user.rows[0].u_id,
+            id: user.rows[0].u_id,
             f_name: user.rows[0].f_name,
+            l_name: user.rows[0].f_name,
+            tel: user.rows[0].tel,
             email: user.rows[0].email,
+            address: user.rows[0].address,
             is_admin: user.rows[0].is_admin,
             }));
         } else {
